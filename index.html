@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Amirthavarshni C R portfolio - aspiring software engineer, MERN developer, and IEEE-published researcher building secure and scalable products."
+    />
+    <title>Amirthavarshni C R | Software Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header" id="top">
+      <nav class="nav container">
+        <a href="#top" class="brand">ACR</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container reveal">
+        <p class="tag">Aspiring Software Engineer</p>
+        <h1>Hi, I’m <span>Amirthavarshni C R</span></h1>
+        <p class="subtitle">
+          I build secure, scalable, and user-focused applications using <strong>MERN, Java, and AWS</strong>.
+          I’m also an IEEE-published researcher applying AI to meaningful real-world challenges.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Explore My Work</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amirtharavi2005@gmail.com" class="btn btn-secondary" target="_blank" rel="noreferrer">Hire Me</a>
+        </div>
+
+        <div class="metrics" aria-label="Key achievements">
+          <article class="metric-card tilt-card">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>Faster dev cycle via reusable React architecture</p>
+          </article>
+          <article class="metric-card tilt-card">
+            <h3>IEEE</h3>
+            <p>Peer-reviewed research publication at ICIDCA 2025</p>
+          </article>
+          <article class="metric-card tilt-card">
+            <h3 class="counter" data-target="4">0</h3>
+            <p>Production-style full-stack and cloud projects delivered</p>
+          </article>
+        </div>
+
+        <div class="engineer-icons" aria-label="Software engineering focus areas">
+          <article class="icon-tile reveal" title="Full-Stack Development"><span>💻</span><p>Full-Stack</p></article>
+          <article class="icon-tile reveal" title="Cloud & Deployment"><span>☁️</span><p>Cloud</p></article>
+          <article class="icon-tile reveal" title="Problem Solving"><span>🧠</span><p>DSA</p></article>
+          <article class="icon-tile reveal" title="Build & Automation"><span>⚙️</span><p>Automation</p></article>
+        </div>
+      </section>
+
+      <section id="about" class="section container reveal">
+        <h2>About Me</h2>
+        <p>
+          I am a Computer Science undergraduate at <strong>Sri Eshwar College of Engineering</strong> (2022–2026), focused on
+          full-stack engineering, cloud-native deployments, and applied ML. I enjoy creating production-ready systems with clean
+          architecture, secure APIs, and polished user experiences.
+        </p>
+        <div class="status-line">B.E. CSE • CGPA 8.0 • Open to Relocate</div>
+      </section>
+
+      <section id="skills" class="section container reveal">
+        <h2>Skills</h2>
+        <div class="chip-row">
+          <button class="skill-chip active" data-filter="all">All</button>
+          <button class="skill-chip" data-filter="web">Web</button>
+          <button class="skill-chip" data-filter="cloud">Cloud</button>
+          <button class="skill-chip" data-filter="core">Core CS</button>
+        </div>
+        <div class="grid cards-4" id="skillsGrid">
+          <article class="card tilt-card" data-group="core"><h3>Languages</h3><p>Java, Python, C, JavaScript</p></article>
+          <article class="card tilt-card" data-group="web"><h3>Web Stack</h3><p>React.js, Node.js, Express.js, HTML, CSS</p></article>
+          <article class="card tilt-card" data-group="web"><h3>Databases</h3><p>MongoDB, MySQL</p></article>
+          <article class="card tilt-card" data-group="cloud"><h3>Cloud & DevOps</h3><p>AWS EC2, S3, CodeDeploy, CloudFormation, CI/CD</p></article>
+          <article class="card tilt-card" data-group="core"><h3>Core CS</h3><p>Data Structures, Algorithms, OOPS, OS</p></article>
+          <article class="card tilt-card" data-group="core"><h3>ML/Data</h3><p>NumPy, Pandas, Matplotlib, Scikit-learn</p></article>
+          <article class="card tilt-card" data-group="web"><h3>Tools</h3><p>GitHub, VS Code, Postman, Power BI, Google Colab</p></article>
+          <article class="card tilt-card" data-group="core"><h3>Platforms</h3><p>Linux, Windows</p></article>
+        </div>
+      </section>
+
+      <section id="projects" class="section container reveal">
+        <h2>Featured Projects</h2>
+        <div class="grid cards-2">
+          <article class="card project tilt-card">
+            <h3>Food Delivery Platform • MERN</h3>
+            <p>Built a secure food-ordering platform with user login, cart, menu browsing, and modular components.</p>
+            <ul>
+              <li>Reduced development time by 30% via reusable component architecture.</li>
+              <li>Secured REST APIs with token-based authentication and endpoint testing.</li>
+              <li>Collaborated through agile workflow and Git version control.</li>
+            </ul>
+          </article>
+
+          <article class="card project tilt-card">
+            <h3>Book Management System • MERN</h3>
+            <p>Engineered a full-stack CRUD platform with secure access, real-time search, and responsive UX.</p>
+            <ul>
+              <li>Implemented JWT auth and Redux-based global state handling.</li>
+              <li>Designed scalable MongoDB models with Mongoose and Express APIs.</li>
+              <li>Deployed with production-style RESTful route structure.</li>
+            </ul>
+          </article>
+
+          <article class="card project tilt-card">
+            <h3>CI/CD Deployment Automation • AWS + GitHub Actions</h3>
+            <p>Automated delivery pipelines and infrastructure provisioning for zero-downtime releases.</p>
+            <ul>
+              <li>Provisioned ASG, load balancer, and IAM roles with CloudFormation.</li>
+              <li>Used OIDC-authenticated GitHub workflows + AppSpec lifecycle hooks.</li>
+              <li>Added rollback-safe deployment strategy and script-based startup controls.</li>
+            </ul>
+          </article>
+
+          <article class="card project tilt-card">
+            <h3>Online Automation Healthcare System • Java + MongoDB</h3>
+            <p>Designed a healthcare portal covering appointments, billing, records, and e-prescriptions.</p>
+            <ul>
+              <li>Adopted Java MVC for modular, maintainable code organization.</li>
+              <li>Applied role-based access control and robust validation.</li>
+              <li>Integrated custom exceptions and multithreading for responsiveness at scale.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section container reveal">
+        <h2>Experience & Achievements</h2>
+        <div class="timeline">
+          <article class="timeline-item tilt-card">
+            <h3>MERN Stack Developer Intern • Better Tomorrow, Coimbatore</h3>
+            <p class="muted">Feb 2024 — Mar 2024</p>
+            <p>Delivered full-stack features, secure backend integrations, and collaborative repository workflows.</p>
+          </article>
+          <article class="timeline-item tilt-card">
+            <h3>IEEE Publication • ICIDCA 2025</h3>
+            <p>
+              Published <em>“HeritageAI: Ancient Script Transcription and Structural Damage Prediction”</em>, focused on AI-powered
+              transcription and structural risk prediction for heritage conservation.
+            </p>
+          </article>
+          <article class="timeline-item tilt-card">
+            <h3>AICTE-MSME National Entrepreneurship Program • Shortlisted</h3>
+            <p>
+              Proposed a secure online voting model with user/candidate management, live counting, and conceptual blockchain + biometric validation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container reveal">
+        <h2>Education & Certifications</h2>
+        <div class="grid cards-2">
+          <article class="card tilt-card">
+            <h3>B.E. Computer Science Engineering</h3>
+            <p>Sri Eshwar College of Engineering • 2022 — 2026</p>
+            <p><strong>CGPA:</strong> 8.0</p>
+          </article>
+          <article class="card tilt-card">
+            <h3>Certifications</h3>
+            <ul>
+              <li>AWS Certified Cloud Practitioner</li>
+              <li>Learn Java Programming — Udemy</li>
+              <li>Mastering Data Structures & Algorithms using C/C++ — Udemy</li>
+              <li>Design and Implementation of Human-Computer Interfaces — NPTEL</li>
+              <li>Structured Query Language (SQL) — HackerRank</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container contact reveal">
+        <h2>Let’s Work Together</h2>
+        <p>I’m looking for internship and entry-level software roles in full-stack development, cloud, and AI-enabled systems.</p>
+        <div class="contact-links">
+          <a href="mailto:amirtharavi2005@gmail.com">amirtharavi2005@gmail.com</a>
+          <a href="tel:+916383771294">+91 63837 71294</a>
+          <a href="https://www.linkedin.com/in/amirtha-varshni-532471258/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/Amirthavarshni" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> Amirthavarshni C R • Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
