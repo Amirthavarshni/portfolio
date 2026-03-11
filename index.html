@@ -3,205 +3,286 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Amirthavarshni C R portfolio - aspiring software engineer, MERN developer, and IEEE-published researcher building secure and scalable products."
-    />
-    <title>Amirthavarshni C R | Software Developer Portfolio</title>
+    <meta name="description" content="Amirthavarshni C R portfolio - aspiring software engineer, MERN developer, AWS practitioner, and IEEE-published researcher." />
+    <title>Amirthavarshni C R | Aspiring Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <span id="top" style="position:absolute;top:0;left:0;"></span>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+    <div class="noise" aria-hidden="true"></div>
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <header class="site-header" id="top">
+    <header class="site-header">
       <nav class="nav container">
-        <a href="#top" class="brand">ACR</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a href="#top" class="brand"><span class="brand-dot"></span>ACR</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=amirtharavi2005@gmail.com" target="_blank" rel="noreferrer" class="nav-hire">Hire Me ↗</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero container reveal">
-        <p class="tag">Aspiring Software Engineer</p>
-        <h1>Hi, I’m <span>Amirthavarshni C R</span></h1>
-        <p class="subtitle">
-          I build secure, scalable, and user-focused applications using <strong>MERN, Java, and AWS</strong>.
-          I’m also an IEEE-published researcher applying AI to meaningful real-world challenges.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">Explore My Work</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amirtharavi2005@gmail.com" class="btn btn-secondary" target="_blank" rel="noreferrer">Hire Me</a>
+      <!-- HERO -->
+      <section class="hero" id="hero-section">
+        <div class="hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+          <canvas id="gridCanvas"></canvas>
         </div>
-
-        <div class="metrics" aria-label="Key achievements">
-          <article class="metric-card tilt-card">
-            <h3 class="counter" data-target="30">0</h3>
-            <p>Faster dev cycle via reusable React architecture</p>
-          </article>
-          <article class="metric-card tilt-card">
-            <h3>IEEE</h3>
-            <p>Peer-reviewed research publication at ICIDCA 2025</p>
-          </article>
-          <article class="metric-card tilt-card">
-            <h3 class="counter" data-target="4">0</h3>
-            <p>Production-style full-stack and cloud projects delivered</p>
-          </article>
+        <div class="container hero-inner">
+          <div class="hero-eyebrow reveal-fade">
+            <span class="eyebrow-pulse"></span>
+            Available for Internship &amp; Full-time Roles
+          </div>
+          <h1 class="hero-name reveal-fade" style="--d:0.15s">
+            Amirthavarshni<br><em>C R</em>
+          </h1>
+          <p class="hero-role reveal-fade" style="--d:0.28s">
+            Full-Stack Engineer &nbsp;·&nbsp; AWS Cloud Practitioner &nbsp;·&nbsp; IEEE Researcher
+          </p>
+          <p class="hero-desc reveal-fade" style="--d:0.38s">
+            Building <strong>secure, scalable, user-focused</strong> software with MERN, Java &amp; AWS —
+            turning practical ideas into clean, production-ready applications.
+          </p>
+          <div class="hero-actions reveal-fade" style="--d:0.48s">
+            <a href="#projects" class="btn btn-primary">Explore Work <span class="btn-arrow">→</span></a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+          <div class="hero-tags reveal-fade" style="--d:0.58s">
+            <span>React</span><span>Node.js</span><span>Java</span><span>AWS</span><span>MongoDB</span><span>CI/CD</span>
+          </div>
         </div>
+        <div class="hero-stats container">
+          <div class="stat-card sc-purple"><span class="stat-num counter" data-target="30" data-suffix="%">0</span><span class="stat-label">Dev Cycle Reduced</span></div>
+          <div class="stat-card sc-teal"><span class="stat-num">IEEE</span><span class="stat-label">Published Researcher</span></div>
+          <div class="stat-card sc-amber"><span class="stat-num counter" data-target="6" data-suffix="+">0</span><span class="stat-label">Projects Delivered</span></div>
+          <div class="stat-card sc-blue"><span class="stat-num">8.0</span><span class="stat-label">CGPA at SECE</span></div>
+        </div>
+        <div class="scroll-hint" aria-hidden="true"><div class="scroll-line"></div><span>Scroll</span></div>
+      </section>
 
-        <div class="engineer-icons" aria-label="Software engineering focus areas">
-          <article class="icon-tile reveal" title="Full-Stack Development"><span>💻</span><p>Full-Stack</p></article>
-          <article class="icon-tile reveal" title="Cloud & Deployment"><span>☁️</span><p>Cloud</p></article>
-          <article class="icon-tile reveal" title="Problem Solving"><span>🧠</span><p>DSA</p></article>
-          <article class="icon-tile reveal" title="Build & Automation"><span>⚙️</span><p>Automation</p></article>
+      <!-- ABOUT -->
+      <section id="about" class="section reveal-section">
+        <div class="container about-grid">
+          <div class="about-text">
+            <div class="section-tag">01 / About</div>
+            <h2>The person<br><span class="text-accent">behind the code</span></h2>
+            <p>Currently pursuing <strong>B.E. Computer Science Engineering</strong> at Sri Eshwar College of Engineering (2022–2026, CGPA 8.0). I focus on full-stack development, cloud deployment, and practical AI use-cases.</p>
+            <p>I love building things that matter — systems that are fast, secure, and genuinely useful. Whether it's a complex CI/CD pipeline or a polished React UI, I care about the craft.</p>
+            <div class="about-pills">
+              <span>🎓 B.E. CSE · CGPA 8.0</span>
+              <span>📍 Open to Relocate</span>
+              <span>☁️ AWS Certified</span>
+              <span>📄 IEEE Published</span>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="code-card">
+              <div class="code-header"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="code-filename">amirthavarshni.json</span></div>
+              <pre class="code-body"><code><span class="c-p">{</span>
+  <span class="c-k">"name"</span>: <span class="c-s">"Amirthavarshni C R"</span>,
+  <span class="c-k">"role"</span>: <span class="c-s">"Full-Stack Engineer"</span>,
+  <span class="c-k">"stack"</span>: <span class="c-p">[</span>
+    <span class="c-s">"React"</span>, <span class="c-s">"Node.js"</span>,
+    <span class="c-s">"Java"</span>, <span class="c-s">"AWS"</span>
+  <span class="c-p">]</span>,
+  <span class="c-k">"status"</span>: <span class="c-s">"Open to Work ✅"</span>,
+  <span class="c-k">"cgpa"</span>: <span class="c-n">8.0</span>,
+  <span class="c-k">"ieee"</span>: <span class="c-b">true</span>
+<span class="c-p">}</span></code></pre>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="section container reveal">
-        <h2>About Me</h2>
-        <p>
-          I am a Computer Science undergraduate at <strong>Sri Eshwar College of Engineering</strong> (2022–2026), focused on
-          full-stack engineering, cloud-native deployments, and applied ML. I enjoy creating production-ready systems with clean
-          architecture, secure APIs, and polished user experiences.
-        </p>
-        <div class="status-line">B.E. CSE • CGPA 8.0 • Open to Relocate</div>
-      </section>
-
-      <section id="skills" class="section container reveal">
-        <h2>Skills</h2>
-        <div class="chip-row">
-          <button class="skill-chip active" data-filter="all">All</button>
-          <button class="skill-chip" data-filter="web">Web</button>
-          <button class="skill-chip" data-filter="cloud">Cloud</button>
-          <button class="skill-chip" data-filter="core">Core CS</button>
-        </div>
-        <div class="grid cards-4" id="skillsGrid">
-          <article class="card tilt-card" data-group="core"><h3>Languages</h3><p>Java, Python, C, JavaScript</p></article>
-          <article class="card tilt-card" data-group="web"><h3>Web Stack</h3><p>React.js, Node.js, Express.js, HTML, CSS</p></article>
-          <article class="card tilt-card" data-group="web"><h3>Databases</h3><p>MongoDB, MySQL</p></article>
-          <article class="card tilt-card" data-group="cloud"><h3>Cloud & DevOps</h3><p>AWS EC2, S3, CodeDeploy, CloudFormation, CI/CD</p></article>
-          <article class="card tilt-card" data-group="core"><h3>Core CS</h3><p>Data Structures, Algorithms, OOPS, OS</p></article>
-          <article class="card tilt-card" data-group="core"><h3>ML/Data</h3><p>NumPy, Pandas, Matplotlib, Scikit-learn</p></article>
-          <article class="card tilt-card" data-group="web"><h3>Tools</h3><p>GitHub, VS Code, Postman, Power BI, Google Colab</p></article>
-          <article class="card tilt-card" data-group="core"><h3>Platforms</h3><p>Linux, Windows</p></article>
+      <!-- SKILLS -->
+      <section id="skills" class="section reveal-section">
+        <div class="container">
+          <div class="section-tag">02 / Skills</div>
+          <h2>Tech I work with</h2>
+          <div class="skill-filter-row">
+            <button class="skill-chip active" data-filter="all">All</button>
+            <button class="skill-chip" data-filter="web">Web</button>
+            <button class="skill-chip" data-filter="cloud">Cloud</button>
+            <button class="skill-chip" data-filter="core">Core CS</button>
+          </div>
+          <div class="skills-grid" id="skillsGrid">
+            <div class="skill-card" data-group="core"><div class="skill-icon">⚡</div><h3>Languages</h3><div class="skill-tags"><span>Java</span><span>C</span><span>JavaScript</span></div></div>
+            <div class="skill-card" data-group="web"><div class="skill-icon">⚛️</div><h3>Frontend</h3><div class="skill-tags"><span>React.js</span><span>HTML5</span><span>CSS3</span></div></div>
+            <div class="skill-card" data-group="web"><div class="skill-icon">🛠</div><h3>Backend</h3><div class="skill-tags"><span>Node.js</span><span>Express.js</span><span>REST APIs</span></div></div>
+            <div class="skill-card" data-group="web"><div class="skill-icon">🗄️</div><h3>Databases</h3><div class="skill-tags"><span>MongoDB</span><span>MySQL</span></div></div>
+            <div class="skill-card" data-group="cloud"><div class="skill-icon">☁️</div><h3>Cloud &amp; DevOps</h3><div class="skill-tags"><span>AWS EC2</span><span>S3</span><span>Lambda</span><span>CodeDeploy</span><span>CI/CD</span></div></div>
+            <div class="skill-card" data-group="core"><div class="skill-icon">🧮</div><h3>Core CS</h3><div class="skill-tags"><span>DSA</span><span>OOP</span><span>Algorithms</span></div></div>
+            <div class="skill-card" data-group="core"><div class="skill-icon">🤖</div><h3>ML / Data</h3><div class="skill-tags"><span>NumPy</span><span>Pandas</span><span>Scikit-learn</span></div></div>
+            <div class="skill-card" data-group="web"><div class="skill-icon">🔧</div><h3>Tools</h3><div class="skill-tags"><span>GitHub</span><span>Postman</span><span>VS Code</span><span>PowerBI</span></div></div>
+          </div>
         </div>
       </section>
 
-      <section id="projects" class="section container reveal">
-        <h2>Featured Projects</h2>
-        <div class="grid cards-2">
-          <article class="card project tilt-card">
-            <h3>Food Delivery Platform • MERN</h3>
-            <p>Built a secure food-ordering platform with user login, cart, menu browsing, and modular components.</p>
-            <ul>
-              <li>Reduced development time by 30% via reusable component architecture.</li>
-              <li>Secured REST APIs with token-based authentication and endpoint testing.</li>
-              <li>Collaborated through agile workflow and Git version control.</li>
-            </ul>
-          </article>
-
-          <article class="card project tilt-card">
-            <h3>Book Management System • MERN</h3>
-            <p>Engineered a full-stack CRUD platform with secure access, real-time search, and responsive UX.</p>
-            <ul>
-              <li>Implemented JWT auth and Redux-based global state handling.</li>
-              <li>Designed scalable MongoDB models with Mongoose and Express APIs.</li>
-              <li>Deployed with production-style RESTful route structure.</li>
-            </ul>
-          </article>
-
-          <article class="card project tilt-card">
-            <h3>CI/CD Deployment Automation • AWS + GitHub Actions</h3>
-            <p>Automated delivery pipelines and infrastructure provisioning for zero-downtime releases.</p>
-            <ul>
-              <li>Provisioned ASG, load balancer, and IAM roles with CloudFormation.</li>
-              <li>Used OIDC-authenticated GitHub workflows + AppSpec lifecycle hooks.</li>
-              <li>Added rollback-safe deployment strategy and script-based startup controls.</li>
-            </ul>
-          </article>
-
-          <article class="card project tilt-card">
-            <h3>Online Automation Healthcare System • Java + MongoDB</h3>
-            <p>Designed a healthcare portal covering appointments, billing, records, and e-prescriptions.</p>
-            <ul>
-              <li>Adopted Java MVC for modular, maintainable code organization.</li>
-              <li>Applied role-based access control and robust validation.</li>
-              <li>Integrated custom exceptions and multithreading for responsiveness at scale.</li>
-            </ul>
-          </article>
+      <!-- PROJECTS -->
+      <section id="projects" class="section reveal-section">
+        <div class="container">
+          <div class="section-tag">03 / Projects</div>
+          <h2>Featured Work</h2>
+          <div class="projects-grid">
+            <article class="project-card featured-card">
+              <div class="project-num">01</div>
+              <div class="project-badge mern-badge">MERN Stack</div>
+              <h3>Food Delivery Web App</h3>
+              <p>Secure food ordering platform with login, cart, and browsing modules. Reduced dev cycle by 30% through modular reusable components.</p>
+              <ul><li>Secured APIs via token auth &amp; Postman testing</li><li>30% faster build cycles via component architecture</li></ul>
+              <div class="project-stack"><span>ReactJS</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-num">02</div>
+              <div class="project-badge mern-badge">MERN Stack</div>
+              <h3>Book Management System</h3>
+              <p>Full-stack app with CRUD books, authentication, and search functionality deployed on Render.</p>
+              <ul><li>JWT access control + Redux global state</li><li>Responsive React UI + Mongoose APIs</li></ul>
+              <div class="project-stack"><span>React</span><span>Express</span><span>Mongoose</span><span>JWT</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-num">03</div>
+              <div class="project-badge cloud-badge">AWS + GitHub</div>
+              <h3>CI/CD Deployment Automation</h3>
+              <p>Cloud infrastructure + deployment pipeline with zero-downtime releases and rollback safety.</p>
+              <ul><li>CloudFormation: ASG, LB, IAM provisioning</li><li>OIDC-authenticated GitHub Actions workflows</li></ul>
+              <div class="project-stack"><span>AWS</span><span>CloudFormation</span><span>GitHub Actions</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-num">04</div>
+              <div class="project-badge java-badge">Java</div>
+              <h3>Healthcare Automation System</h3>
+              <p>Healthcare portal with appointments, records, billing, and e-prescriptions.</p>
+              <ul><li>Java MVC + role-based access control</li><li>Multithreading for concurrent user handling</li></ul>
+              <div class="project-stack"><span>Java</span><span>MongoDB</span><span>MVC</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-num">05</div>
+              <div class="project-badge java-badge">JavaFX</div>
+              <h3>Recipe Management System</h3>
+              <p>Desktop app to organize, search, and modify recipes with real-time data sync.</p>
+              <ul><li>Smart search + real-time MongoDB sync</li><li>Customizable recipe collections dashboard</li></ul>
+              <div class="project-stack"><span>JavaFX</span><span>Scene Builder</span><span>MongoDB</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-num">06</div>
+              <div class="project-badge cloud-badge">AWS 2025</div>
+              <h3>Serverless Web Application</h3>
+              <p>Fully serverless architecture with near-instant response times and ~50% cost reduction.</p>
+              <ul><li>Lambda + API Gateway + DynamoDB + CloudFront</li><li>50% reduced operational costs</li></ul>
+              <div class="project-stack"><span>Lambda</span><span>API Gateway</span><span>DynamoDB</span><span>S3</span></div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="experience" class="section container reveal">
-        <h2>Experience & Achievements</h2>
-        <div class="timeline">
-          <article class="timeline-item tilt-card">
-            <h3>MERN Stack Developer Intern • Better Tomorrow, Coimbatore</h3>
-            <p class="muted">Feb 2024 — Mar 2024</p>
-            <p>Delivered full-stack features, secure backend integrations, and collaborative repository workflows.</p>
-          </article>
-          <article class="timeline-item tilt-card">
-            <h3>IEEE Publication • ICIDCA 2025</h3>
-            <p>
-              Published <em>“HeritageAI: Ancient Script Transcription and Structural Damage Prediction”</em>, focused on AI-powered
-              transcription and structural risk prediction for heritage conservation.
-            </p>
-          </article>
-          <article class="timeline-item tilt-card">
-            <h3>AICTE-MSME National Entrepreneurship Program • Shortlisted</h3>
-            <p>
-              Proposed a secure online voting model with user/candidate management, live counting, and conceptual blockchain + biometric validation.
-            </p>
-          </article>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section reveal-section">
+        <div class="container">
+          <div class="section-tag">04 / Experience</div>
+          <h2>Journey So Far</h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-left"><div class="tl-year">2025</div></div>
+              <div class="tl-connector"><div class="tl-dot"></div><div class="tl-line"></div></div>
+              <div class="tl-card">
+                <div class="tl-role">IEEE Publication — ICIDCA 2025</div>
+                <div class="tl-company">IEEE Xplore Indexed</div>
+                <p><em>"HeritageAI: Ancient Script Transcription and Structural Damage Prediction"</em> — AI-driven transcription for heritage conservation.</p>
+                <div class="tl-tags"><span>AI/ML</span><span>Research</span><span>IEEE</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-left"><div class="tl-year">2024</div></div>
+              <div class="tl-connector"><div class="tl-dot"></div><div class="tl-line"></div></div>
+              <div class="tl-card">
+                <div class="tl-role">AICTE-MSME Shortlisted</div>
+                <div class="tl-company">National Entrepreneurship Program 2024</div>
+                <p>Proposed a real-time secure voting system with instant counting, notifications, and blockchain + biometric verification.</p>
+                <div class="tl-tags"><span>Blockchain</span><span>Security</span><span>Innovation</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-left"><div class="tl-year">2024</div></div>
+              <div class="tl-connector"><div class="tl-dot"></div></div>
+              <div class="tl-card">
+                <div class="tl-role">MERN Stack Developer Intern</div>
+                <div class="tl-company">Better Tomorrow, Coimbatore &nbsp;·&nbsp; Feb – Mar 2024</div>
+                <p>Contributed to secure full-stack features, API integrations, and collaborative Git workflows in a production environment.</p>
+                <div class="tl-tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Git</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section container reveal">
-        <h2>Education & Certifications</h2>
-        <div class="grid cards-2">
-          <article class="card tilt-card">
-            <h3>B.E. Computer Science Engineering</h3>
-            <p>Sri Eshwar College of Engineering • 2022 — 2026</p>
-            <p><strong>CGPA:</strong> 8.0</p>
-          </article>
-          <article class="card tilt-card">
-            <h3>Certifications</h3>
-            <ul>
-              <li>AWS Certified Cloud Practitioner</li>
-              <li>Learn Java Programming — Udemy</li>
-              <li>Mastering Data Structures & Algorithms using C/C++ — Udemy</li>
-              <li>Design and Implementation of Human-Computer Interfaces — NPTEL</li>
-              <li>Structured Query Language (SQL) — HackerRank</li>
-            </ul>
-          </article>
+      <!-- EDUCATION & CERTS -->
+      <section class="section reveal-section">
+        <div class="container">
+          <div class="section-tag">05 / Education</div>
+          <h2>Education &amp; Certifications</h2>
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-icon">🎓</div>
+              <h3>B.E. Computer Science Engineering</h3>
+              <p class="edu-school">Sri Eshwar College of Engineering</p>
+              <p class="edu-year">2022 — 2026</p>
+              <div class="edu-cgpa"><span class="cgpa-label">CGPA</span><span class="cgpa-val">8.0</span></div>
+            </div>
+            <div class="certs-card">
+              <h3 class="certs-title">Certifications</h3>
+              <div class="cert-list">
+                <div class="cert-item"><span class="cert-icon">☁️</span><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+                <div class="cert-item"><span class="cert-icon">☕</span><div><div class="cert-name">Learn Java Programming — Beginner to Master</div><div class="cert-issuer">Udemy</div></div></div>
+                <div class="cert-item"><span class="cert-icon">🧮</span><div><div class="cert-name">Mastering DSA using C/C++</div><div class="cert-issuer">Udemy</div></div></div>
+                <div class="cert-item"><span class="cert-icon">🖥</span><div><div class="cert-name">Human-Computer Interfaces Design</div><div class="cert-issuer">NPTEL</div></div></div>
+                <div class="cert-item"><span class="cert-icon">🗃️</span><div><div class="cert-name">SQL Certification</div><div class="cert-issuer">HackerRank</div></div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="section container contact reveal">
-        <h2>Let’s Work Together</h2>
-        <p>I’m looking for internship and entry-level software roles in full-stack development, cloud, and AI-enabled systems.</p>
-        <div class="contact-links">
-          <a href="mailto:amirtharavi2005@gmail.com">amirtharavi2005@gmail.com</a>
-          <a href="tel:+916383771294">+91 63837 71294</a>
-          <a href="https://www.linkedin.com/in/amirtha-varshni-532471258/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/Amirthavarshni" target="_blank" rel="noreferrer">GitHub</a>
+      <!-- CONTACT -->
+      <section id="contact" class="section contact-section reveal-section">
+        <div class="container">
+          <div class="section-tag">06 / Contact</div>
+          <h2>Let's build something<br><span class="text-accent">great together</span></h2>
+          <p class="contact-sub">I'm actively looking for internship and entry-level roles in full-stack, cloud, and AI-enabled systems. Let's talk.</p>
+          <div class="contact-grid">
+            <a href="mailto:amirtharavi2005@gmail.com" class="contact-card"><span class="contact-icon">✉️</span><div><div class="contact-label">Email</div><div class="contact-val">amirtharavi2005@gmail.com</div></div><span class="contact-arrow">↗</span></a>
+            <a href="tel:+916383771294" class="contact-card"><span class="contact-icon">📞</span><div><div class="contact-label">Phone</div><div class="contact-val">+91 63837 71294</div></div><span class="contact-arrow">↗</span></a>
+            <a href="https://www.linkedin.com/in/amirtha-varshni-532471258/" target="_blank" rel="noreferrer" class="contact-card"><span class="contact-icon">💼</span><div><div class="contact-label">LinkedIn</div><div class="contact-val">amirtha-varshni</div></div><span class="contact-arrow">↗</span></a>
+            <a href="https://github.com/Amirthavarshni" target="_blank" rel="noreferrer" class="contact-card"><span class="contact-icon">🐙</span><div><div class="contact-label">GitHub</div><div class="contact-val">Amirthavarshni</div></div><span class="contact-arrow">↗</span></a>
+          </div>
+          <div class="contact-cta">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amirtharavi2005@gmail.com" target="_blank" rel="noreferrer" class="btn btn-primary btn-large">Send a Message <span class="btn-arrow">→</span></a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer container">
-      <p>© <span id="year"></span> Amirthavarshni C R • Built with HTML, CSS, and JavaScript.</p>
+    <footer class="footer">
+      <div class="footer-inner container">
+        <span class="brand footer-brand"><span class="brand-dot"></span>ACR</span>
+        <p>© <span id="year"></span> Amirthavarshni C R &nbsp;·&nbsp; Built with HTML, CSS &amp; JS</p>        <a href="#top" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+      </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
